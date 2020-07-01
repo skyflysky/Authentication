@@ -1,0 +1,33 @@
+2020-07-01 12:37:00,433  INFO Version:21 - HV000001: Hibernate Validator 6.0.18.Final
+2020-07-01 12:37:05,614  INFO DruidDataSource:930 - {dataSource-1} inited
+2020-07-01 12:37:06,076  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-01 12:37:06,270  INFO Version:46 - HHH000412: Hibernate Core {5.3.15.Final}
+2020-07-01 12:37:06,277  INFO Environment:213 - HHH000206: hibernate.properties not found
+2020-07-01 12:37:06,526  INFO Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-01 12:37:06,792  INFO Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-07-01 12:37:08,186  INFO DruidDataSource:1825 - {dataSource-1} closed
+2020-07-01 12:47:44,906  INFO Version:21 - HV000001: Hibernate Validator 6.0.18.Final
+2020-07-01 12:47:50,609  INFO DruidDataSource:930 - {dataSource-1} inited
+2020-07-01 12:47:51,068  INFO LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-07-01 12:47:51,169  INFO Version:46 - HHH000412: Hibernate Core {5.3.15.Final}
+2020-07-01 12:47:51,169  INFO Environment:213 - HHH000206: hibernate.properties not found
+2020-07-01 12:47:51,415  INFO Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-07-01 12:47:51,634  INFO Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-07-01 12:52:51,731  INFO DefaultTask:16 - startup complete
+2020-07-01 13:08:30,381  INFO DefaultTask:16 - startup complete
+2020-07-01 13:09:43,454  INFO DefaultTask:16 - startup complete
+2020-07-01 13:10:02,424  INFO DefaultTask:16 - startup complete
+2020-07-01 13:11:11,092  INFO DefaultTask:16 - startup complete
+2020-07-01 13:11:42,301  INFO DefaultTask:16 - startup complete
+2020-07-01 13:14:16,182  INFO DefaultTask:16 - startup complete
+2020-07-01 13:15:05,799  INFO DefaultTask:16 - startup complete
+2020-07-01 13:15:28,116  INFO DefaultTask:16 - startup complete
+2020-07-01 13:30:37,223  INFO DefaultTask:16 - startup complete
+2020-07-01 13:30:44,643  INFO LogIntercepter:69 - 控制层请求日志 请求接口:'/default/default' 内容:'{"RemoteHost":"127.0.0.1"}'
+2020-07-01 13:31:03,960  INFO LogIntercepter:69 - 控制层请求日志 请求接口:'/default/default' 内容:'{"QueryString":"asdasd=asdasd&fsdfsdf=sdfsdf","RemoteHost":"127.0.0.1","asdasd":"asdasd","fsdfsdf":"sdfsdf"}'
+2020-07-01 13:31:53,460  INFO LogIntercepter:69 - 控制层请求日志 请求接口:'/default/default' 内容:'{"RemoteHost":"127.0.0.1","asdfasdf":"asdfasdf","gdsgsdf":"sdfgsdfg"}'
+2020-07-01 13:38:20,992  INFO DefaultTask:16 - startup complete
