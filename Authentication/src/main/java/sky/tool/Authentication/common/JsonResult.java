@@ -37,6 +37,11 @@ public class JsonResult implements Serializable
 	{
 		return JsonResult.builder().code(HttpResultConstant.SUCCESS.getCode()).msg(HttpResultConstant.SUCCESS.getMessage()).build();
 	}
+	
+	public static JsonResult build(HttpResultConstant constant)
+	{
+		return JsonResult.builder().code(constant.getCode()).msg(constant.getMessage()).build();
+	}
 
 	public static JsonResult build(int code, String msg)
 	{

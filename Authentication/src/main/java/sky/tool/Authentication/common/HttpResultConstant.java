@@ -21,7 +21,17 @@ public enum HttpResultConstant
 	/**
 	 * 非法入参
 	 */
-	INVALID_PARAM(-3 , "invalid param");
+	INVALID_PARAM(-3 , "invalid param"),
+	
+	/**
+	 * 无此实体
+	 */
+	UNREACHABLE_ENTITY(-4 , "unreachable_entity"),
+	
+	/**
+	 * 校验失败
+	 */
+	VERIFICATION_FAIL(-5 , "verification fail");
 
 	private int code;
 	private String message;
