@@ -3,6 +3,7 @@ package sky.tool.Authentication.controller;
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sky.tool.Authentication.common.HttpResultConstant;
 import sky.tool.Authentication.common.JsonResult;
 import sky.tool.Authentication.dto.AbsLogginDto;
+import sky.tool.Authentication.dto.TokenDto;
 import sky.tool.Authentication.entity.abstractt.AbstractLoggin;
 import sky.tool.Authentication.entity.abstractt.AbstractUser;
 import sky.tool.Authentication.service.LogginService;
@@ -20,6 +22,9 @@ import sky.tool.Authentication.service.UserService;
 @RequestMapping("/loggin")
 public class LogginController
 {
+	@Value("${auth.token.delay}")
+	Long tokenDelay;
+	
 	@Resource(name = "authUser")
 	UserService userService;
 	
@@ -46,7 +51,7 @@ public class LogginController
 		AbstractLoggin loggin = logginService.authLoggin(account, password);
 		if(loggin != null)
 		{
-			return JsonResult.success(loggin.getToken());
+			return JsonResult.success(new TokenDto(loggin.getToken(), tokenDelay));
 		}
 		return JsonResult.build(HttpResultConstant.VERIFICATION_FAIL);
 	}

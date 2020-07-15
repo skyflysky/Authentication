@@ -36,6 +36,12 @@ import sky.tool.Authentication.service.LogginService;
 public class DefaultAuthenticationLogginServiceImpl implements LogginService
 {
 	/**
+	 * token延时膨胀系数
+	 */
+	@Value("${auth.token.dilate}")
+	private Double tokenDilate;
+	
+	/**
 	 * 登录验证的时间延迟，只要是account对了，就会启用
 	 */
 	@Value("${auth.loggin.delay}")
@@ -227,7 +233,7 @@ public class DefaultAuthenticationLogginServiceImpl implements LogginService
 				loggin.setToken(newToken);
 				logginDao.save(loggin);
 				redisUtil.remove(oldKey);
-				redisUtil.set(LogginTokenReids.keyGenerate(newToken), new LogginTokenReids(System.currentTimeMillis(), loggin.getId()), tokenDelay);
+				redisUtil.set(LogginTokenReids.keyGenerate(newToken), new LogginTokenReids(System.currentTimeMillis(), loggin.getId()), Math.round(tokenDelay * tokenDilate));
 			}
 			return loggin;
 		}
